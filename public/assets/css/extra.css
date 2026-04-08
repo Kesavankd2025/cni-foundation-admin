@@ -1,0 +1,382 @@
+.jvm-zoom-btn.jvm-zoomin,
+.jvm-zoom-btn.jvm-zoomout {
+  top: 10px;
+  background: #d1d5db;
+  color: #111827;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+
+.slick-dots {
+  display: flex !important;
+}
+
+.fc-toolbar-title {
+  font-size: 24px !important;
+  font-weight: 600;
+}
+
+.fc-button {
+  border-color: var(--primary-600) !important;
+  background: #fff !important;
+  color: var(--primary-600) !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-width: 80px !important;
+}
+
+.fc-button:hover {
+  background-color: var(--primary-50) !important;
+}
+
+.fc-button-active {
+  color: #fff !important;
+  background-color: var(--primary-600) !important;
+}
+
+/* Main menu hover */
+.dropdown>a:hover span {
+  color: #EF5920 !important;
+  /* header color */
+}
+
+/* Submenu hover */
+.sidebar-submenu li a:hover {
+  color: #EF5920 !important;
+  /* header color */
+}
+
+/* Optional: icon color change on hover */
+.dropdown>a:hover i,
+.sidebar-submenu li a:hover i {
+  color: #EF5920 !important;
+}
+
+
+.fc-button-active:hover {
+  color: #fff !important;
+  background-color: var(--primary-600) !important;
+}
+
+.fc-button-active:focus,
+.fc .fc-button-primary:not(:disabled):active:focus {
+  box-shadow: none !important;
+}
+
+.fc-toolbar-chunk {
+  display: flex !important;
+}
+
+.fc .fc-button-primary:focus {
+  box-shadow: none !important;
+}
+
+.fc-h-event {
+  border: 0;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: var(--primary-50) !important;
+  color: var(--primary-600) !important;
+}
+
+.fc-h-event .fc-event-main {
+  border: 0;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: var(--primary-50) !important;
+  color: var(--primary-600) !important;
+}
+
+.fc-v-event .fc-event-main {
+  border: 0;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: var(--primary-50) !important;
+  color: var(--primary-600) !important;
+}
+
+.fc-daygrid-day-number {
+  transition: background-color 0.2s;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 50%;
+}
+
+.fc-daygrid-day:hover .fc-daygrid-day-number {
+  background-color: var(--primary-100) !important;
+  color: var(--primary-600) !important;
+  transition: background-color 0.2s;
+}
+
+.slider-progress .active {
+  transition: all 0.3s linear;
+}
+
+.slick-list {
+  margin: 0 -7px;
+}
+
+.slick-slide>div {
+  padding: 0 10px;
+}
+
+.center-gap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.inline-grid {
+  display: inline-grid;
+}
+
+.image-upload__boxInner.custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table.dataTable th.dt-type-numeric,
+table.dataTable th.dt-type-date,
+table.dataTable td.dt-type-numeric,
+table.dataTable td.dt-type-date {
+  text-align: unset !important;
+}
+
+/* Hide all submenus by default */
+.sidebar-submenu {
+  /* display: none; */
+  list-style: none;
+  padding-left: 20px;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  /* Adjust as needed */
+}
+
+/* Ensure list items have consistent spacing */
+.sidebar-menu li {
+  margin-bottom: 5px;
+  /* Consistent small gap */
+}
+
+
+.sidebar-menu .sidebar-submenu {
+  display: block;
+}
+
+/* Optional: Add transition for smooth toggle */
+.sidebar-menu .dropdown .sidebar-submenu {
+  transition: max-height 0.3s linear;
+  overflow: hidden;
+  max-height: 0px;
+}
+
+/* .sidebar-menu .dropdown.open .sidebar-submenu {
+  max-height: 1000px;
+} */
+
+.sidebar-menu li>a>i {
+  margin-inline-end: 0;
+}
+
+.mr-10 {
+  margin-right: 10px !important;
+}
+
+.sidebar-menu .sidebar-submenu li a {
+  gap: 12px;
+}
+
+/* Active Page State */
+.sidebar-menu .sidebar-submenu li>.active-page {
+  background-color: #EF5920 !important;
+  /* CNI Orange-Red */
+  color: #ffff !important;
+}
+
+/* Active Page Hover (Blue) */
+.sidebar-menu .sidebar-submenu li>a.active-page:hover {
+  background-color: #EF5920 !important;
+  color: #ffffff !important;
+}
+
+.sidebar-menu li>a.active-page:hover {
+  color: #ffffff !important;
+}
+
+.me-8 {
+  margin-right: 8px;
+}
+
+.gap-10 {
+  display: flex;
+  gap: 8px;
+}
+
+.w-33 {
+  width: 33.33%;
+}
+
+.overlay::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  inset-inline-start: 0;
+  width: 0;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.65;
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+.overlay.active::after {
+  width: 100%;
+}
+
+/* Custom Tabs Styling */
+.custom-tabs.nav-tabs {
+  border-bottom: 1px solid var(--neutral-200) !important;
+  gap: 20px;
+}
+
+.custom-tabs .nav-link {
+  color: var(--neutral-600) !important;
+  font-weight: 600 !important;
+  border: none !important;
+  padding: 12px 0px !important;
+  position: relative;
+  background: transparent !important;
+}
+
+.custom-tabs .nav-link:hover,
+.custom-tabs .nav-link.active {
+  color: #EF5920 !important;
+}
+
+.custom-tabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #EF5920;
+}
+
+:root {
+  --bs-nav-link-color: #003366 !important;
+  --bs-nav-tabs-link-active-color: #EF5920 !important;
+  --bs-nav-tabs-link-hover-border-color: transparent !important;
+}
+
+/* Primary Button Overrides */
+.btn-primary {
+  --bs-btn-color: #fff !important;
+  --bs-btn-bg: #003366 !important;
+  --bs-btn-border-color: #003366 !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: #EF5920 !important;
+  --bs-btn-hover-border-color: #EF5920 !important;
+  --bs-btn-focus-shadow-rgb: 0, 51, 102;
+  --bs-btn-active-color: #fff !important;
+  --bs-btn-active-bg: #CC4015 !important;
+  --bs-btn-active-border-color: #CC4015 !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  --bs-btn-disabled-color: #fff !important;
+  --bs-btn-disabled-bg: #003366 !important;
+  --bs-btn-disabled-border-color: #003366 !important;
+}
+
+
+/* Custom background for Chapter Roles */
+.bg-role-custom {
+  background-color: #f4a46042 !important;
+  transition: background-color 0.2s;
+}
+
+.bg-role-custom:hover {
+  background-color: #f4a46070 !important;
+}
+
+/* Global Hover Effects */
+.hover-border-primary:hover {
+  border-color: #003366 !important;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.12);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.transition-2 {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ash Button Style */
+.btn-ash {
+  background-color: #616e7a !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 8px 20px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.btn-ash:hover {
+  background-color: #4a545e !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom Edit Button Style */
+.btn-edit-custom {
+  color: #ff3b30 !important;
+  background-color: rgb(247 157 0 / 24%) !important;
+  transition: all 0.3s ease;
+}
+
+.btn-edit-custom:hover {
+  background-color: rgb(247 157 0 / 40%) !important;
+  transform: translateY(-2px);
+}
+
+/* Custom Checkbox Style */
+.form-check-input:checked {
+  background-color: #003366 !important;
+  border: 2px solid #ffffff !important;
+  /* Thick white border when checked */
+  /* box-shadow: 0 0 5px rgba(0, 51, 102, 0.4) !important; */
+}
+
+.form-check-input:focus {
+  border-color: #003366 !important;
+  box-shadow: 0 0 0 0.25rem rgba(0, 51, 102, 0.25) !important;
+}
+
+.form-check-input {
+  cursor: pointer;
+  border: 1.5px solid #d1d5db !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Force white tick visibility on all checkboxes */
+.form-check-input:checked[type=checkbox] {
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='m6 10 3 3 6-6'/%3e%3c/svg%3e") !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='m6 10 3 3 6-6'/%3e%3c/svg%3e") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}

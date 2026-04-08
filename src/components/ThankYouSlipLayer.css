@@ -1,0 +1,45 @@
+/* Thank You Slip Layer Styles */
+
+.bg-white-20 {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.spacing-1 {
+    letter-spacing: 1px;
+}
+
+.transition-2 {
+    transition: all 0.3s ease;
+}
+
+.hover-bg-neutral-50:hover {
+    background-color: #838387 !important;
+}
+
+.shadow-hover-sm:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.radius-16 {
+    border-radius: 16px !important;
+}
+
+.radius-12 {
+    border-radius: 12px !important;
+}
+
+.radius-8 {
+    border-radius: 8px !important;
+}
+
+.radius-4 {
+    border-radius: 4px !important;
+}
+
+.w-4-px {
+    width: 4px !important;
+}
+
+.h-32-px {
+    height: 32px !important;
+}
