@@ -59,6 +59,8 @@ apiClient.interceptors.response.use(
     return response;
   },
   function (error) {
+    // Disabled 401 redirect as requested
+    /*
     if (
       error.response?.status === 401 &&
       !error.config.url.includes("/auth/login") &&
@@ -67,6 +69,7 @@ apiClient.interceptors.response.use(
       localStorage.removeItem("userToken");
       window.location.href = "/sign-in";
     }
+    */
     return Promise.reject(error);
   }
 );

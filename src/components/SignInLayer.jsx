@@ -31,56 +31,16 @@ const SignInLayer = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let newErrors = {};
-
-    if (!phoneNumber.trim()) {
-      newErrors.phoneNumber = "Please Enter Your Phone Number";
-    }
-    const pinValue = pin.join("");
-    if (pinValue.length !== 4) {
-      newErrors.pin = "Please Enter a Complete 4-Digit PIN";
-    }
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
-
     setLoading(true);
-    try {
-      const credentials = {
-        phoneNumber: phoneNumber.trim(),
-        pin: pinValue,
-      };
-      const result = await LoginApi.login(credentials);
-      if (result.status) {
-        const token =
-          result.response.token ||
-          result.response.data?.token ||
-          result.response.accessToken;
-        const user = result.response.user || result.response.data?.user;
 
-        if (token) {
-          localStorage.setItem("userToken", token);
-        } else {
-          console.error("Token missing in response:", result.response);
-          alert("Login successful but token missing from response.");
-          setLoading(false);
-          return;
-        }
+    // Bypass validations and backend entirely
+    localStorage.setItem("userToken", "mock-token");
+    localStorage.setItem("userData", JSON.stringify({ name: "Admin", role: "admin", permissions: ["all"] }));
+    setTimeout(() => {
+      navigate("/");
+    }, 100);
 
-        if (user) {
-          localStorage.setItem("userData", JSON.stringify(user));
-        }
-        setTimeout(() => {
-          navigate("/");
-        }, 100);
-      }
-    } catch (error) {
-      console.error("Login error:", error);
-    } finally {
-      setLoading(false);
-    }
+    setLoading(false);
   };
 
   return (

@@ -12,30 +12,15 @@ const MasterLayout = ({ children }) => {
   const navigate = useNavigate();
   const sidebarRef = useRef(null);
   const [permissions, setPermissions] = useState([]);
-  const [userType, setUserType] = useState("");
-  const [userData, setUserData] = useState(null);
+  const [userType, setUserType] = useState("ADMIN");
+  const [userData, setUserData] = useState({ name: "Administrator", role: { name: "Admin" } });
 
   useEffect(() => {
-    const fetchPermissions = async () => {
-      try {
-        const result = await LoginApi.getRolesAndPermissions();
-        if (result.status) {
-          const user = result.response.data;
-          setUserData(user);
-          setUserType(user.userType);
-          setPermissions(user.permissions || []);
-        }
-      } catch (error) {
-        console.error("Error fetching permissions:", error);
-      }
-    };
-    fetchPermissions();
+    // Disabled fetching permissions from backend
   }, []);
 
   const hasPermission = (moduleName, action = "view") => {
-    if (userType === "ADMIN") return true;
-    const module = permissions.find((perm) => perm.moduleName === moduleName);
-    return module?.actions?.[action];
+    return true; // Always return true
   };
   useEffect(() => {
     const handleDropdownClick = (event) => {
